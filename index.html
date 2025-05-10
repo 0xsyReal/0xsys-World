@@ -7,7 +7,6 @@
     <link href="css/page.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" href="https://i.hizliresim.com/k89ehbp.gif" type="image/gif">
     <style>
-      /* Buton stilini buraya ekliyoruz */
       button {
         background-color: #FFB6C1;
         padding: 15px 30px;
@@ -19,23 +18,18 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
       }
-
-      /* Buton üzerine gelince olacak hover efekti */
       button:hover {
-        background-color: #FF69B4; /* Rengi biraz daha tatlı pembeye çeviriyoruz */
-        transform: scale(1.1); /* Biraz büyümesini sağlıyoruz */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Gölgesini daha belirgin yapıyoruz */
+        background-color: #FF69B4;
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
       }
-
-      /* Butona tıklandığında olacak efekt */
       button:active {
-        transform: scale(0.95); /* Butona basıldığında biraz küçülür */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeyi hafifletiyoruz */
+        transform: scale(0.95);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
   <body>
-    <!-- Müzik ekleniyor -->
     <audio id="bgMusic" loop>
       <source src="bg.mp3" type="audio/mp3">
       Tarayıcınız bu sesi desteklemiyor.
@@ -68,7 +62,7 @@
           ♡ <a href="https://roblox.com/users/5519159495/profile">roblox</a><br>
           ♡ <a href="https://namemc.com/profile/0xsy">namemc</a>
           <hr>
-        </div> <!-- /.item3 -->
+        </div>
 
         <!-- main -->
         <div class="item2">
@@ -85,14 +79,12 @@
           </a>
           <p>hi, im 0xsy. i use he/him pronouns. i like cute stuff, coding, playing video games and sometimes drawing.</p>
           <hr>
-          
-          <!-- Müzik Başlat Butonu -->
+
           <div style="text-align:center; margin-top:20px;">
             <button onclick="playMusic()">♡ Start the Music! ♡</button>
           </div>
 
           <hr>
-          <!-- buttons -->
           <marquee direction="right">
             <img src="img/graphics/buttons/ttr.png">
             <img src="img/graphics/buttons/weezerfan.gif">
@@ -118,7 +110,6 @@
           </marquee>
           <hr>
 
-          <!-- update log -->
           <div class="header">Update log! ♡</div>
           <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
             <b>05/10/25</b> - Hewwo! its my update log message! :3
@@ -127,10 +118,9 @@
 
           <div style="float:left; margin-right:10px;">
             <div class="header" style="font-size:15px; margin:5px;">random image</div>
-            <a href="https://piclog.blue/profile.php?id=135">
-              <img src="https://i.hizliresim.com/czozt3i.gif" style="width:200px; height:200px;">
-            </a>
+            <img src="https://i.hizliresim.com/czozt3i.gif" style="width:200px; height:200px;">
           </div>
+
           <div style="float:left;">
             <div class="header" style="font-size:15px; margin:5px;">random video</div>
             <iframe style="padding:5px;" width="310px" height="200px" src="https://www.youtube.com/embed/5b2MFJMeonI?si=lEETOCpEoaF8xKbU" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -147,6 +137,53 @@
         }
       }
     </script>
-    <script src="showWebring.js"></script>
+
+    <!-- Webring kutusu -->
+    <script>
+      var nameSelfWebring = "0xsy";
+      var quoteSelfWebring = "🎀 Cuteness is a defense mechanism. Please do not engage.";
+      var imgurlSelfWebring = "https://i.pinimg.com/736x/72/05/2d/72052d9d64d420b1453cfbc3cc0fdf5a.jpg";
+
+      const style = document.createElement("style");
+      style.textContent = `
+        #templateWebring {
+          width: 300px;
+          height: 164px;
+          margin: 40px auto;
+          background-image: url('https://webring.koinuko.pink/img/bg.png');
+          background-size: cover;
+          font-family: Verdana;
+          color: #452134;
+          text-align: center;
+          border: 2px solid #DD28A7;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+        }
+
+        #webringdesc {
+          font-size: 14px;
+          font-weight: bold;
+          color: #BF3C8E;
+          line-height: 1.4;
+        }
+
+        #webringiconbox {
+          display: none;
+        }
+      `;
+      document.head.appendChild(style);
+
+      const container = document.createElement("div");
+      container.id = "templateWebring";
+      container.innerHTML = `
+        <div id='webringdesc'>
+          <p>${quoteSelfWebring}</p>
+        </div>
+      `;
+      document.body.appendChild(container);
+    </script>
   </body>
 </html>
