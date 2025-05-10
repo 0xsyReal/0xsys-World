@@ -9,12 +9,10 @@
   </head>
   <body>
     <!-- Müzik ekleniyor -->
-    <audio id="backgroundMusic" loop>
+    <audio id="bgMusic" loop>
       <source src="bg.mp3" type="audio/mp3">
       Tarayıcınız bu sesi desteklemiyor.
     </audio>
-
-    <button onclick="playMusic()">Müziği Başlat</button>
 
     <div class="layout">
       <div class="grid-container">
@@ -60,6 +58,15 @@
           </a>
           <p>hi, im 0xsy. i use he/him pronouns. i like cute stuff, coding, playing video games and sometimes drawing.</p>
           <hr>
+          
+          <!-- Müzik Başlat Butonu -->
+          <div style="text-align:center; margin-top:20px;">
+            <button onclick="playMusic()" style="background-color: #FFB6C1; padding: 15px 30px; border-radius: 10px; border: none; font-size: 18px; color: white; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: 0.3s;">
+              ♡ Start the Music! ♡
+            </button>
+          </div>
+
+          <hr>
           <!-- buttons -->
           <marquee direction="right">
             <img src="img/graphics/buttons/ttr.png">
@@ -86,57 +93,6 @@
           </marquee>
           <hr>
 
-          <!-- webrings -->
-          <table width="100%">
-            <tr>
-              <td width="190px">
-                <div style="width: 156px; margin:auto;">
-                  <img src="https://i.pinimg.com/736x/de/d1/bb/ded1bb4e86a503a4d4aa4900a1158dcb.jpg" style="width:156px; height:156px;">
-                </div>
-              </td>
-              <td>
-                <div id="selfinsertwebring">
-                  <script src="showWebring.js"></script>
-                </div>
-              </td>
-            </tr>
-          </table>
-          <hr>
-
-          <!-- blinkies -->
-          <marquee>
-            <img src="img/graphics/blinkies/buds.gif">
-            <img src="img/graphics/blinkies/bunny.gif">
-            <img src="img/graphics/blinkies/candy.gif">
-            <img src="img/graphics/blinkies/cat.gif">
-            <img src="img/graphics/blinkies/catsmeow.gif">
-            <img src="img/graphics/blinkies/computer.gif">
-            <img src="img/graphics/blinkies/dreamy.gif">
-            <img src="img/graphics/blinkies/drop.gif">
-            <img src="img/graphics/blinkies/fluttershy.gif">
-            <img src="img/graphics/blinkies/goodnight.gif">
-            <img src="img/graphics/blinkies/hewwo.gif">
-            <img src="img/graphics/blinkies/home.gif">
-            <img src="img/graphics/blinkies/iheartsanrio.gif">
-            <img src="img/graphics/blinkies/jammies.gif">
-            <img src="img/graphics/blinkies/jerma.gif">
-            <img src="img/graphics/blinkies/kawaii.gif">
-            <img src="img/graphics/blinkies/kitten.gif">
-            <img src="img/graphics/blinkies/kitties.gif">
-            <img src="img/graphics/blinkies/love.gif">
-            <img src="img/graphics/blinkies/maid.gif">
-            <img src="img/graphics/blinkies/mcdonalds.gif">
-            <img src="img/graphics/blinkies/meow.gif">
-            <img src="img/graphics/blinkies/nyancat.gif" width="150px" height="20px">
-            <img src="img/graphics/blinkies/pink.gif">
-            <img src="img/graphics/blinkies/sparkle.gif">
-            <img src="img/graphics/blinkies/teddy.gif">
-            <img src="img/graphics/blinkies/twinkle.gif">
-            <img src="img/graphics/blinkies/valentine.gif">
-            <img src="img/graphics/blinkies/webkinz.gif">
-          </marquee>
-          <hr>
-
           <!-- update log -->
           <div class="header">Update log! ♡</div>
           <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
@@ -160,8 +116,10 @@
 
     <script>
       function playMusic() {
-        var music = document.getElementById("backgroundMusic");
-        music.play();
+        var music = document.getElementById('bgMusic');
+        if (music.paused) {
+          music.play();
+        }
       }
     </script>
   </body>
