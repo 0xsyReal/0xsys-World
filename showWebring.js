@@ -2,7 +2,7 @@ var nameSelfWebring = "0xsy";
 var quoteSelfWebring = "🎀 Cuteness is a defense mechanism. Please do not engage.";
 var imgurlSelfWebring = "https://i.pinimg.com/736x/72/05/2d/72052d9d64d420b1453cfbc3cc0fdf5a.jpg";
 
-var templateWebring = document.createElement("selfinsertwebring");
+var templateWebring = document.createElement("div");
 templateWebring.innerHTML = `
 <style>
   #templateWebring {
