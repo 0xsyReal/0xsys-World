@@ -1,14 +1,15 @@
+// Bilgileri ayarlıyoruz
 var nameSelfWebring = "0xsy";
 var quoteSelfWebring = "🎀 Cuteness is a defense mechanism. Please do not engage.";
 var imgurlSelfWebring = "https://i.pinimg.com/736x/72/05/2d/72052d9d64d420b1453cfbc3cc0fdf5a.jpg";
 
-var templateWebring = document.createElement("selfinsertwebring");
-templateWebring.innerHTML = 
-<style>
+// CSS'i head'e ekle
+const style = document.createElement("style");
+style.textContent = `
   #templateWebring {
     width: 300px;
     height: 164px;
-    margin: auto;
+    margin: 40px auto;
     background-image: url('https://webring.koinuko.pink/img/bg.png');
     background-size: cover;
     font-family: Verdana;
@@ -23,7 +24,7 @@ templateWebring.innerHTML =
   }
 
   #webringdesc {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: #BF3C8E;
     line-height: 1.4;
@@ -32,12 +33,19 @@ templateWebring.innerHTML =
   #webringiconbox {
     display: none;
   }
-</style>
+`;
+document.head.appendChild(style);
 
-<div id='templateWebring'>
+// Webring kutusunu oluştur
+const container = document.createElement("div");
+container.id = "templateWebring";
+container.innerHTML = `
   <div id='webringdesc'>
     <p>${quoteSelfWebring}</p>
   </div>
-</div>
-;
-document.getElementById("selfinsertwebring").appendChild(templateWebring);
+`;
+
+// Gövdeye ekle (sayfanın sonuna)
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.appendChild(container);
+});
