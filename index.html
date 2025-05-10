@@ -7,7 +7,7 @@
     <link href="css/page.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" href="https://i.hizliresim.com/k89ehbp.gif" type="image/gif">
     <style>
-      /* Buton stilleri (aynı kalıyor) */
+      /* Buton stilini buraya ekliyoruz */
       button {
         background-color: #FFB6C1;
         padding: 15px 30px;
@@ -20,19 +20,22 @@
         transition: all 0.3s ease;
       }
 
+      /* Buton üzerine gelince olacak hover efekti */
       button:hover {
-        background-color: #FF69B4;
-        transform: scale(1.1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background-color: #FF69B4; /* Rengi biraz daha tatlı pembeye çeviriyoruz */
+        transform: scale(1.1); /* Biraz büyümesini sağlıyoruz */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Gölgesini daha belirgin yapıyoruz */
       }
 
+      /* Butona tıklandığında olacak efekt */
       button:active {
-        transform: scale(0.95);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(0.95); /* Butona basıldığında biraz küçülür */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeyi hafifletiyoruz */
       }
     </style>
   </head>
   <body>
+    <!-- Müzik ekleniyor -->
     <audio id="bgMusic" loop>
       <source src="bg.mp3" type="audio/mp3">
       Tarayıcınız bu sesi desteklemiyor.
@@ -40,12 +43,99 @@
 
     <div class="layout">
       <div class="grid-container">
+        <!-- status -->
+        <div class="item5" style="width:225px; height:115px; overflow-y:auto;">
+          <img src="img/pfp.jpg" style="width:100px; float:left; padding:3px;">
+          <div id="statuscafe">
+            <div id="statuscafe-username">0xsy</div>
+            <div id="statuscafe-content">uwu :3</div>
+          </div>
+        </div>
 
-        <!-- ... diğer içerikler ... -->
+        <!-- header -->
+        <div class="item1" style="height:115px; background-image:url('/img/banner2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;">
+          <div style="color:rgba(255, 255, 255, 0); user-select: none;"> /</div>
+        </div>
 
-        <!-- webring alanı -->
-        <div id="selfinsertwebring" style="margin-top: 20px;"></div>
+        <!-- sidebar -->
+        <div class="item3" style="width:100px">
+          <img src="img/graphics/rainicorn.png" width="90px">
+          <hr>
+          <b>navigation</b><br>
+          ♡ <a href="https://discord.com/users/803634256517005334">discord</a><br>
+          ♡ <a href="https://youtube.com/@0xsyreal">youtube</a><br>
+          ♡ <a href="https://steamcommunity.com/id/0xsy">steam</a><br>
+          ♡ <a href="https://roblox.com/users/5519159495/profile">roblox</a><br>
+          ♡ <a href="https://namemc.com/profile/0xsy">namemc</a>
+          <hr>
+        </div> <!-- /.item3 -->
 
+        <!-- main -->
+        <div class="item2">
+          <div align="center">
+            <img src="img/graphics/catbnuy.gif">
+            <img src="img/graphics/letters.gif">
+            <img src="img/graphics/catbnuy.gif">
+            <br>
+            <div class="header">Welcome!~ ♪(´▽｀)</div>
+          </div>
+          <hr>
+          <a href="https://toyhou.se/Robodoggiez">
+            <img src="https://i.pinimg.com/736x/56/1d/a4/561da4256042db44ddf671fe5f757f3e.jpg" style="float:left; width:120px">
+          </a>
+          <p>hi, im 0xsy. i use he/him pronouns. i like cute stuff, coding, playing video games and sometimes drawing.</p>
+          <hr>
+          
+          <!-- Müzik Başlat Butonu -->
+          <div style="text-align:center; margin-top:20px;">
+            <button onclick="playMusic()">♡ Start the Music! ♡</button>
+          </div>
+
+          <hr>
+          <!-- buttons -->
+          <marquee direction="right">
+            <img src="img/graphics/buttons/ttr.png">
+            <img src="img/graphics/buttons/weezerfan.gif">
+            <img src="img/graphics/buttons/animaljam.png">
+            <img src="img/graphics/buttons/antihentai.gif">
+            <img src="img/graphics/buttons/besteyes.gif">
+            <img src="img/graphics/buttons/button269.gif">
+            <img src="img/graphics/buttons/code-editor.png">
+            <img src="img/graphics/buttons/tto.png">
+            <img src="img/graphics/buttons/funny.gif">
+            <img src="img/graphics/buttons/furby%20button.png">
+            <img src="img/graphics/buttons/graphicdesign.gif">
+            <img src="img/graphics/buttons/kyaah.gif">
+            <img src="img/graphics/buttons/melody.gif">
+            <img src="img/graphics/buttons/miku.gif">
+            <img src="img/graphics/buttons/miku2.gif">
+            <img src="img/graphics/buttons/NYA!.gif">
+            <img src="img/graphics/buttons/paws.png">
+            <img src="img/graphics/buttons/puyo.png">
+            <img src="img/graphics/buttons/Censor_NYRc.gif" width="88px" height="31px">
+            <img src="img/graphics/buttons/toonbook%20button.png">
+            <img src="img/graphics/buttons/valentines_button.gif">
+          </marquee>
+          <hr>
+
+          <!-- update log -->
+          <div class="header">Update log! ♡</div>
+          <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
+            <b>05/10/25</b> - Hewwo! its my update log message! :3
+          </div>
+          <hr>
+
+          <div style="float:left; margin-right:10px;">
+            <div class="header" style="font-size:15px; margin:5px;">random image</div>
+            <a href="https://piclog.blue/profile.php?id=135">
+              <img src="https://i.hizliresim.com/czozt3i.gif" style="width:200px; height:200px;">
+            </a>
+          </div>
+          <div style="float:left;">
+            <div class="header" style="font-size:15px; margin:5px;">random video</div>
+            <iframe style="padding:5px;" width="310px" height="200px" src="https://www.youtube.com/embed/5b2MFJMeonI?si=lEETOCpEoaF8xKbU" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -57,11 +147,5 @@
         }
       }
     </script>
-
-    <!-- Webring scripti -->
-    <script src="js/showWebring.js"></script>
   </body>
-<div id="selfinsertwebring"></div>
-<script src="js/showWebring.js"></script>
-</body>
 </html>
