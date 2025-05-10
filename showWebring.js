@@ -45,7 +45,5 @@ container.innerHTML = `
   </div>
 `;
 
-// Gövdeye ekle (sayfanın sonuna)
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.appendChild(container);
-});
+// Sayfa yüklenmiş olduğundan direkt ekliyoruz
+document.body.appendChild(container);
