@@ -84,11 +84,11 @@
         <img src="img/graphics/rainicorn.png" width="90px">
         <hr>
         <b>navigation</b><br>
-        ♡ <a href="https://discord.com/users/803634256517005334">discord</a><br>
-        ♡ <a href="https://youtube.com/@0xsyreal">youtube</a><br>
-        ♡ <a href="https://steamcommunity.com/id/0xsy">steam</a><br>
-        ♡ <a href="https://roblox.com/users/5519159495/profile">roblox</a><br>
-        ♡ <a href="https://namemc.com/profile/0xsy">namemc</a>
+        ♡ <a href="https://discord.com/users/803634256517005334" target="_blank">discord</a><br>
+        ♡ <a href="https://youtube.com/@0xsyreal" target="_blank">youtube</a><br>
+        ♡ <a href="https://steamcommunity.com/id/0xsy" target="_blank">steam</a><br>
+        ♡ <a href="https://roblox.com/users/5519159495/profile" target="_blank">roblox</a><br>
+        ♡ <a href="https://namemc.com/profile/0xsy" target="_blank">namemc</a>
         <hr>
       </div>
 
@@ -203,7 +203,7 @@
 
         <div style="float:left;">
           <div class="header" style="font-size:15px; margin:5px;">random video</div>
-          <iframe id="randomVideo" style="padding:5px;" width="310px" height="200px" src="" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe id="randomVideo" style="padding:5px;" width="310px" height="200px" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -218,7 +218,6 @@
     }
 
     window.onload = function () {
-      // Random Image Function
       const randomImages = [
         "https://i.hizliresim.com/czozt3i.gif",
         "https://i.hizliresim.com/aefuz92.png",
@@ -241,19 +240,6 @@
         "https://i.hizliresim.com/6rvk3cp.jpg"
       ];
 
-      const lastIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
-      let newIndex;
-      do {
-        newIndex = Math.floor(Math.random() * randomImages.length);
-      } while (newIndex === lastIndex && randomImages.length > 1);
-      sessionStorage.setItem("lastRandomImageIndex", newIndex);
-
-      const img = document.getElementById("randomImage");
-      if (img) {
-        img.src = randomImages[newIndex];
-      }
-
-      // Random Video Function
       const randomVideos = [
         "https://www.youtube.com/embed/AnLuKx_c7Ds",
         "https://www.youtube.com/embed/EnQLt4bkUCA",
@@ -268,10 +254,32 @@
         "https://www.youtube.com/embed/4TzVOLOROkM"
       ];
 
-      const videoIndex = Math.floor(Math.random() * randomVideos.length);
-      const video = document.getElementById("randomVideo");
-      if (video) {
-        video.src = randomVideos[videoIndex];
+      const lastRandomImageIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
+      let newImageIndex;
+      do {
+        newImageIndex = Math.floor(Math.random() * randomImages.length);
+      } while (newImageIndex === lastRandomImageIndex && randomImages.length > 1);
+      sessionStorage.setItem("lastRandomImageIndex", newImageIndex);
+
+      const img = document.getElementById("randomImage");
+      if (img) {
+        img.src = randomImages[newImageIndex];
+      }
+
+      const lastRandomVideoIndex = parseInt(sessionStorage.getItem("lastRandomVideoIndex")) || -1;
+      let newVideoIndex;
+      let videoCount = 0;
+
+      do {
+        newVideoIndex = Math.floor(Math.random() * randomVideos.length);
+        videoCount++;
+      } while (newVideoIndex === lastRandomVideoIndex && videoCount < 4);
+      
+      sessionStorage.setItem("lastRandomVideoIndex", newVideoIndex);
+
+      const iframe = document.getElementById("randomVideo");
+      if (iframe) {
+        iframe.src = randomVideos[newVideoIndex];
       }
     };
   </script>
