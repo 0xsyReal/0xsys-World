@@ -11,7 +11,7 @@ templateWebring.innerHTML = `
     margin: auto !important;
     background-image: url('https://webring.koinuko.pink/img/bg.png');
     background-size: cover;
-    font-family: Verdana !important;
+    font-family: 'Comic Sans MS', cursive, sans-serif !important;
     color: #452134 !important;
     display: flex;
     flex-direction: column;
@@ -31,11 +31,12 @@ templateWebring.innerHTML = `
   }
   #webringdesc {
     font-size: 16px !important;
-    color: #452134 !important;
     font-weight: bold !important;
+    color: #D66BA0 !important;
     padding: 5px !important;
     width: 220px !important;
     text-align: center !important;
+    text-shadow: 1px 1px 1px #fff5fa;
   }
 </style>
 
