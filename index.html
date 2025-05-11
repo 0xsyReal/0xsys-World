@@ -55,6 +55,47 @@
     #webringiconbox {
       display: none;
     }
+
+    /* Yeni buton tasarımı */
+    #playMusicButton {
+      background-color: #FFB6C1;
+      padding: 20px 50px;
+      border-radius: 30px;
+      border: 3px solid #FF69B4;
+      font-size: 20px;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease;
+      position: relative;
+    }
+
+    #playMusicButton:hover {
+      background-color: #FF69B4;
+      color: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      animation: pulse 1s infinite;
+    }
+
+    #playMusicButton:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Pulse animasyonu */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   </style>
 </head>
 <body>
@@ -109,7 +150,7 @@
         <hr>
 
         <div style="text-align:center; margin-top:20px;">
-          <button onclick="playMusic()">♡ Start the Music! ♡</button>
+          <button id="playMusicButton" onclick="playMusic()">♡ Start the Music! ♡</button>
         </div>
 
         <hr>
@@ -212,76 +253,21 @@
   <script>
     function playMusic() {
       var music = document.getElementById('bgMusic');
+      var button = document.getElementById('playMusicButton');
+
       if (music.paused) {
         music.play();
+        // Butona basıldığında bir animasyon ekleyelim
+        button.innerHTML = "♡ Music Playing! ♡";
+        button.style.backgroundColor = "#FF1493";  // Daha koyu bir pembe rengi
+        button.style.color = "yellow";  // Müzik çalarken metin rengi sarı olsun
+      } else {
+        music.pause();
+        button.innerHTML = "♡ Start the Music! ♡";
+        button.style.backgroundColor = "#FFB6C1";  // Başlangıç rengi
+        button.style.color = "white";  // Varsayılan metin rengi
       }
     }
-
-    window.onload = function () {
-      const randomImages = [
-        "https://i.hizliresim.com/czozt3i.gif",
-        "https://i.hizliresim.com/aefuz92.png",
-        "https://i.hizliresim.com/76irlcf.jpg",
-        "https://i.hizliresim.com/8x1dwer.gif",
-        "https://i.hizliresim.com/q3xr94q.jpg",
-        "https://i.hizliresim.com/s14oj76.jpg",
-        "https://i.hizliresim.com/7ow5vfh.gif",
-        "https://i.hizliresim.com/1n9y4cq.jpg",
-        "https://i.hizliresim.com/k7ktxkb.png",
-        "https://i.hizliresim.com/qqg858v.jpg",
-        "https://i.hizliresim.com/loaubpb.jpg",
-        "https://i.hizliresim.com/700jg0c.jpg",
-        "https://i.hizliresim.com/1zpz5zg.jpg",
-        "https://i.hizliresim.com/rd0jlh4.jpg",
-        "https://i.hizliresim.com/hirmbtj.jpg",
-        "https://i.hizliresim.com/4yfidk7.jpg",
-        "https://i.hizliresim.com/llqseyh.png",
-        "https://i.hizliresim.com/cnmzw17.png",
-        "https://i.hizliresim.com/6rvk3cp.jpg"
-      ];
-
-      const randomVideos = [
-        "https://www.youtube.com/embed/AnLuKx_c7Ds",
-        "https://www.youtube.com/embed/EnQLt4bkUCA",
-        "https://www.youtube.com/embed/5b2MFJMeonI",
-        "https://www.youtube.com/embed/f51w4SSG1oo",
-        "https://www.youtube.com/embed/DMSNFZuF1W4",
-        "https://www.youtube.com/embed/qy9NX7iI6YQ",
-        "https://www.youtube.com/embed/jNUTxvki_d0",
-        "https://www.youtube.com/embed/ulfeM8JGq7s",
-        "https://www.youtube.com/embed/xEGWKXwUb54",
-        "https://www.youtube.com/embed/hz0yx_MmE6g",
-        "https://www.youtube.com/embed/4TzVOLOROkM"
-      ];
-
-      const lastRandomImageIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
-      let newImageIndex;
-      do {
-        newImageIndex = Math.floor(Math.random() * randomImages.length);
-      } while (newImageIndex === lastRandomImageIndex && randomImages.length > 1);
-      sessionStorage.setItem("lastRandomImageIndex", newImageIndex);
-
-      const img = document.getElementById("randomImage");
-      if (img) {
-        img.src = randomImages[newImageIndex];
-      }
-
-      const lastRandomVideoIndex = parseInt(sessionStorage.getItem("lastRandomVideoIndex")) || -1;
-      let newVideoIndex;
-      let videoCount = 0;
-
-      do {
-        newVideoIndex = Math.floor(Math.random() * randomVideos.length);
-        videoCount++;
-      } while (newVideoIndex === lastRandomVideoIndex && videoCount < 4);
-      
-      sessionStorage.setItem("lastRandomVideoIndex", newVideoIndex);
-
-      const iframe = document.getElementById("randomVideo");
-      if (iframe) {
-        iframe.src = randomVideos[newVideoIndex];
-      }
-    };
   </script>
 </body>
 </html>
