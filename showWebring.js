@@ -30,11 +30,12 @@ templateWebring.innerHTML = `
     height: 100px !important;
   }
   #webringdesc {
-    font-size: small !important;
+    font-size: 16px !important;
     color: #452134 !important;
-    font-weight: normal !important;
+    font-weight: bold !important;
     padding: 5px !important;
-    width: 200px;
+    width: 220px !important;
+    text-align: center !important;
   }
 </style>
 
