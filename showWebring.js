@@ -1,6 +1,43 @@
-var imgurlSelfWebring = "https://i.pinimg.com/736x/72/05/2d/72052d9d64d420b1453cfbc3cc0fdf5a.jpg";
+// Tüm görsellerin listesi
+const webringImages = [
+  "https://i.hizliresim.com/czozt3i.gif",
+  "https://i.hizliresim.com/aefuz92.png",
+  "https://i.hizliresim.com/76irlcf.jpg",
+  "https://i.hizliresim.com/8x1dwer.gif",
+  "https://i.hizliresim.com/q3xr94q.jpg",
+  "https://i.hizliresim.com/s14oj76.jpg",
+  "https://i.hizliresim.com/7ow5vfh.gif",
+  "https://i.hizliresim.com/1n9y4cq.jpg",
+  "https://i.hizliresim.com/k7ktxkb.png",
+  "https://i.hizliresim.com/qqg858v.jpg",
+  "https://i.hizliresim.com/loaubpb.jpg",
+  "https://i.hizliresim.com/700jg0c.jpg",
+  "https://i.hizliresim.com/1zpz5zg.jpg",
+  "https://i.hizliresim.com/rd0jlh4.jpg",
+  "https://i.hizliresim.com/hirmbtj.jpg",
+  "https://i.hizliresim.com/4yfidk7.jpg",
+  "https://i.hizliresim.com/llqseyh.png",
+  "https://i.hizliresim.com/cnmzw17.png",
+  "https://i.hizliresim.com/6rvk3cp.jpg"
+];
 
-var templateWebring = document.createElement("div");
+// Önceki gösterilen görselin index'ini sessionStorage'dan al
+let lastIndex = parseInt(sessionStorage.getItem("lastWebringImageIndex")) || -1;
+let newIndex;
+
+// Aynı resmin tekrar çıkmaması için döngü
+do {
+  newIndex = Math.floor(Math.random() * webringImages.length);
+} while (newIndex === lastIndex && webringImages.length > 1);
+
+// Yeni seçilen index'i kaydet
+sessionStorage.setItem("lastWebringImageIndex", newIndex);
+
+// Seçilen görsel
+const imgurlSelfWebring = webringImages[newIndex];
+
+// HTML öğesini oluştur ve ekle
+const templateWebring = document.createElement("div");
 templateWebring.innerHTML = `
 <style>
   #templateWebring {

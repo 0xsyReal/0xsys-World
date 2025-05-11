@@ -74,10 +74,10 @@
         </div>
       </div>
        
-  <!-- header -->
-    <div class="item1" style="height:115px; background-image:url('/img/banner2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;">
-    <div style="color:rgba(255, 255, 255, 0); user-select: none;">im doing janky shit again please forgive me. okaaaaaaaaayyyy :/</div>
-    </div>
+      <!-- header -->
+      <div class="item1" style="height:115px; background-image:url('/img/banner2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;">
+        <div style="color:rgba(255, 255, 255, 0); user-select: none;">im doing janky shit again please forgive me. okaaaaaaaaayyyy :/</div>
+      </div>
 
       <!-- sidebar -->
       <div class="item3" style="width:100px">
@@ -156,50 +156,50 @@
           </tr>
         </table>
         <!-- end of webrings -->
-        <!-- shitton of blinkies here -->
         <hr>
         <marquee>
-        <!-- <img src="img/graphics/blinkies/ace.gif"> -->
-        <img src="img/graphics/blinkies/buds.gif">
-        <img src="img/graphics/blinkies/bunny.gif">
-        <img src="img/graphics/blinkies/candy.gif">
-        <img src="img/graphics/blinkies/cat.gif">
-        <img src="img/graphics/blinkies/catsmeow.gif">
-        <img src="img/graphics/blinkies/computer.gif">
-        <img src="img/graphics/blinkies/dreamy.gif">
-        <img src="img/graphics/blinkies/drop.gif">
-        <img src="img/graphics/blinkies/fluttershy.gif">
-        <img src="img/graphics/blinkies/goodnight.gif">
-        <img src="img/graphics/blinkies/hewwo.gif">
-        <img src="img/graphics/blinkies/home.gif">
-        <img src="img/graphics/blinkies/iheartsanrio.gif">
-        <img src="img/graphics/blinkies/jammies.gif">
-        <img src="img/graphics/blinkies/jerma.gif">
-        <img src="img/graphics/blinkies/kawaii.gif">
-        <img src="img/graphics/blinkies/kitten.gif">
-        <img src="img/graphics/blinkies/kitties.gif">
-        <img src="img/graphics/blinkies/love.gif">
-        <img src="img/graphics/blinkies/maid.gif">
-        <img src="img/graphics/blinkies/mcdonalds.gif">
-        <img src="img/graphics/blinkies/meow.gif">
-        <img src="img/graphics/blinkies/nyancat.gif" width="150px" height="20px">
-        <img src="img/graphics/blinkies/pink.gif">
-        <img src="img/graphics/blinkies/sparkle.gif">
-        <img src="img/graphics/blinkies/teddy.gif">
-        <img src="img/graphics/blinkies/twinkle.gif">
-        <img src="img/graphics/blinkies/valentine.gif">
-        <img src="img/graphics/blinkies/webkinz.gif">
+          <img src="img/graphics/blinkies/buds.gif">
+          <img src="img/graphics/blinkies/bunny.gif">
+          <img src="img/graphics/blinkies/candy.gif">
+          <img src="img/graphics/blinkies/cat.gif">
+          <img src="img/graphics/blinkies/catsmeow.gif">
+          <img src="img/graphics/blinkies/computer.gif">
+          <img src="img/graphics/blinkies/dreamy.gif">
+          <img src="img/graphics/blinkies/drop.gif">
+          <img src="img/graphics/blinkies/fluttershy.gif">
+          <img src="img/graphics/blinkies/goodnight.gif">
+          <img src="img/graphics/blinkies/hewwo.gif">
+          <img src="img/graphics/blinkies/home.gif">
+          <img src="img/graphics/blinkies/iheartsanrio.gif">
+          <img src="img/graphics/blinkies/jammies.gif">
+          <img src="img/graphics/blinkies/jerma.gif">
+          <img src="img/graphics/blinkies/kawaii.gif">
+          <img src="img/graphics/blinkies/kitten.gif">
+          <img src="img/graphics/blinkies/kitties.gif">
+          <img src="img/graphics/blinkies/love.gif">
+          <img src="img/graphics/blinkies/maid.gif">
+          <img src="img/graphics/blinkies/mcdonalds.gif">
+          <img src="img/graphics/blinkies/meow.gif">
+          <img src="img/graphics/blinkies/nyancat.gif" width="150px" height="20px">
+          <img src="img/graphics/blinkies/pink.gif">
+          <img src="img/graphics/blinkies/sparkle.gif">
+          <img src="img/graphics/blinkies/teddy.gif">
+          <img src="img/graphics/blinkies/twinkle.gif">
+          <img src="img/graphics/blinkies/valentine.gif">
+          <img src="img/graphics/blinkies/webkinz.gif">
         </marquee>
-      <hr>
+        <hr>
+
         <div class="header">Update log! ♡</div>
         <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
           <b>05/10/25</b> - Hewwo! its my update log message! :3
         </div>
         <hr>
 
+        <!-- ✅ RANDOM IMAGE DİNAMİK HALİ -->
         <div style="float:left; margin-right:10px;">
           <div class="header" style="font-size:15px; margin:5px;">random image</div>
-          <img src="https://i.hizliresim.com/czozt3i.gif" style="width:200px; height:200px;">
+          <img id="randomImage" src="" style="width:200px; height:200px;">
         </div>
 
         <div style="float:left;">
@@ -217,6 +217,39 @@
         music.play();
       }
     }
+
+    // 🎲 Random image kısmı
+    const randomImages = [
+      "https://i.hizliresim.com/czozt3i.gif",
+      "https://i.hizliresim.com/aefuz92.png",
+      "https://i.hizliresim.com/76irlcf.jpg",
+      "https://i.hizliresim.com/8x1dwer.gif",
+      "https://i.hizliresim.com/q3xr94q.jpg",
+      "https://i.hizliresim.com/s14oj76.jpg",
+      "https://i.hizliresim.com/7ow5vfh.gif",
+      "https://i.hizliresim.com/1n9y4cq.jpg",
+      "https://i.hizliresim.com/k7ktxkb.png",
+      "https://i.hizliresim.com/qqg858v.jpg",
+      "https://i.hizliresim.com/loaubpb.jpg",
+      "https://i.hizliresim.com/700jg0c.jpg",
+      "https://i.hizliresim.com/1zpz5zg.jpg",
+      "https://i.hizliresim.com/rd0jlh4.jpg",
+      "https://i.hizliresim.com/hirmbtj.jpg",
+      "https://i.hizliresim.com/4yfidk7.jpg",
+      "https://i.hizliresim.com/llqseyh.png",
+      "https://i.hizliresim.com/cnmzw17.png",
+      "https://i.hizliresim.com/6rvk3cp.jpg"
+    ];
+
+    const lastIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
+    let newIndex;
+
+    do {
+      newIndex = Math.floor(Math.random() * randomImages.length);
+    } while (newIndex === lastIndex && randomImages.length > 1);
+
+    sessionStorage.setItem("lastRandomImageIndex", newIndex);
+    document.getElementById("randomImage").src = randomImages[newIndex];
   </script>
 </body>
 </html>
