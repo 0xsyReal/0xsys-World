@@ -55,6 +55,13 @@
     #webringiconbox {
       display: none;
     }
+
+    /* Random image styling */
+    #randomImage {
+      max-width: 100%;
+      max-height: 200px;
+      object-fit: contain; /* Ensure image is contained within bounds */
+    }
   </style>
 </head>
 <body>
@@ -198,7 +205,7 @@
         <!-- RANDOM IMAGE -->
         <div style="float:left; margin-right:10px;">
           <div class="header" style="font-size:15px; margin:5px;">random image</div>
-          <img id="randomImage" src="" style="width:auto; height:auto;">
+          <img id="randomImage" src="" style="width:200px; height:200px;">
         </div>
 
         <div style="float:left;">
@@ -241,19 +248,10 @@
       ];
 
       const lastIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
-      const lastFourIndexes = JSON.parse(sessionStorage.getItem("lastFourIndexes")) || [];
       let newIndex;
-
       do {
         newIndex = Math.floor(Math.random() * randomImages.length);
-      } while (lastFourIndexes.includes(newIndex));
-
-      lastFourIndexes.push(newIndex);
-      if (lastFourIndexes.length > 4) {
-        lastFourIndexes.shift(); // Remove the oldest index
-      }
-
-      sessionStorage.setItem("lastFourIndexes", JSON.stringify(lastFourIndexes));
+      } while (newIndex === lastIndex && randomImages.length > 1);
       sessionStorage.setItem("lastRandomImageIndex", newIndex);
 
       const img = document.getElementById("randomImage");
