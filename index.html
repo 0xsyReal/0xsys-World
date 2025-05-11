@@ -203,7 +203,7 @@
 
         <div style="float:left;">
           <div class="header" style="font-size:15px; margin:5px;">random video</div>
-          <iframe style="padding:5px;" width="310px" height="200px" src="https://www.youtube.com/embed/5b2MFJMeonI?si=lEETOCpEoaF8xKbU" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe id="randomVideo" style="padding:5px;" width="310px" height="200px" src="" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -218,6 +218,7 @@
     }
 
     window.onload = function () {
+      // Random Image Function
       const randomImages = [
         "https://i.hizliresim.com/czozt3i.gif",
         "https://i.hizliresim.com/aefuz92.png",
@@ -250,6 +251,27 @@
       const img = document.getElementById("randomImage");
       if (img) {
         img.src = randomImages[newIndex];
+      }
+
+      // Random Video Function
+      const randomVideos = [
+        "https://www.youtube.com/embed/AnLuKx_c7Ds",
+        "https://www.youtube.com/embed/EnQLt4bkUCA",
+        "https://www.youtube.com/embed/5b2MFJMeonI",
+        "https://www.youtube.com/embed/f51w4SSG1oo",
+        "https://www.youtube.com/embed/DMSNFZuF1W4",
+        "https://www.youtube.com/embed/qy9NX7iI6YQ",
+        "https://www.youtube.com/embed/jNUTxvki_d0",
+        "https://www.youtube.com/embed/ulfeM8JGq7s",
+        "https://www.youtube.com/embed/xEGWKXwUb54",
+        "https://www.youtube.com/embed/hz0yx_MmE6g",
+        "https://www.youtube.com/embed/4TzVOLOROkM"
+      ];
+
+      const videoIndex = Math.floor(Math.random() * randomVideos.length);
+      const video = document.getElementById("randomVideo");
+      if (video) {
+        video.src = randomVideos[videoIndex];
       }
     };
   </script>
