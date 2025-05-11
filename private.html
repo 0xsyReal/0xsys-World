@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Page</title>
+    <link href="CSS/page.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <div style="text-align:center; margin-top:50px;">
+        <h2>Private Sayfaya Hoşgeldiniz!</h2>
+        <p>Bu sayfaya erişmek için şifrenizi girin:</p>
+        <form id="loginForm">
+            <input type="password" id="password" placeholder="Şifrenizi girin..." required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <div id="links" style="display:none; margin-top:20px;">
+            <h3>Linkler:</h3>
+            <ul>
+                <li><a href="https://google.com">Test1</a></li>
+                <li><a href="https://youtube.com">Test2</a></li>
+        </div>
+    </div>
+
+    <script>
+        // Şifre doğrulama
+        const correctPassword = "root@Os030303to";
+        const loginForm = document.getElementById('loginForm');
+        const passwordInput = document.getElementById('password');
+        const links = document.getElementById('links');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const enteredPassword = passwordInput.value;
+
+            if (enteredPassword === correctPassword) {
+                links.style.display = 'block';  // Linkleri göster
+                alert('Başarıyla giriş yaptınız!');
+            } else {
+                alert('Yanlış şifre, lütfen tekrar deneyin.');
+            }
+        });
+    </script>
+</body>
+</html>
