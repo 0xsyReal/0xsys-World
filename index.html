@@ -7,6 +7,7 @@
     <link href="css/page.css" rel="stylesheet" type="text/css" media="all">
     <link rel="icon" href="https://i.hizliresim.com/k89ehbp.gif" type="image/gif">
     <style>
+      /* Mevcut buton stili */
       button {
         background-color: #FFB6C1;
         padding: 15px 30px;
@@ -26,6 +27,39 @@
       button:active {
         transform: scale(0.95);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Şifreli giriş alanı */
+      .password-form {
+        background-color: #fff0f5;
+        padding: 20px;
+        border-radius: 15px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="password"] {
+        padding: 10px;
+        border: 2px solid #ff69b4;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+      .files-section {
+        display: none;
+        margin-top: 30px;
+        background-color: #fff0f5;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .file-link {
+        display: block;
+        font-size: 18px;
+        margin: 10px 0;
+        color: #ff69b4;
+        text-decoration: none;
+      }
+      .file-link:hover {
+        color: #ff1493;
       }
     </style>
   </head>
@@ -109,81 +143,50 @@
             <img src="img/graphics/buttons/valentines_button.gif">
           </marquee>
           <hr>
+          <!-- WEBRINGS -->
+          <table width="100%">
+            <tbody><tr>
+              <td width="190px">
+                <div style="width: 156px; margin:auto;">
+                  <img src="https://i.pinimg.com/736x/de/d1/bb/ded1bb4e86a503a4d4aa4900a1158dcb.jpg" style="width:156px; height:156px;">
+                </div>
+              </td>
+              <td>
+                <!--START OF SELF INSERT
 
-          <div class="header">Update log! ♡</div>
-          <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
-            <b>05/10/25</b> - Hewwo! its my update log message! :3
+          <!-- Şifreli Giriş -->
+          <div class="password-form" id="passwordForm">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="checkPassword()">Access Files</button>
           </div>
-          <hr>
 
-          <div style="float:left; margin-right:10px;">
-            <div class="header" style="font-size:15px; margin:5px;">random image</div>
-            <img src="https://i.hizliresim.com/czozt3i.gif" style="width:200px; height:200px;">
+          <!-- Dosyalar -->
+          <div class="files-section" id="filesSection">
+            <h2>📂 My Files</h2>
+            <ul>
+              <li><a href="https://drive.google.com/..." class="file-link" target="_blank">Project ZIP</a></li>
+              <li><a href="https://drive.google.com/..." class="file-link" target="_blank">School Stuff</a></li>
+              <li><a href="https://drive.google.com/..." class="file-link" target="_blank">Images</a></li>
+            </ul>
           </div>
 
-          <div style="float:left;">
-            <div class="header" style="font-size:15px; margin:5px;">random video</div>
-            <iframe style="padding:5px;" width="310px" height="200px" src="https://www.youtube.com/embed/5b2MFJMeonI?si=lEETOCpEoaF8xKbU" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
+          <script>
+            function playMusic() {
+              var music = document.getElementById('bgMusic');
+              if (music.paused) {
+                music.play();
+              }
+            }
 
-    <script>
-      function playMusic() {
-        var music = document.getElementById('bgMusic');
-        if (music.paused) {
-          music.play();
-        }
-      }
-    </script>
+            function checkPassword() {
+              const password = document.getElementById("password").value;
+              const correctPassword = "root@Os030303to"; // Şifreyi burada güncelledik
 
-    <!-- Webring kutusu -->
-    <script>
-      var nameSelfWebring = "0xsy";
-      var quoteSelfWebring = "🎀 Cuteness is a defense mechanism. Please do not engage.";
-      var imgurlSelfWebring = "https://i.pinimg.com/736x/72/05/2d/72052d9d64d420b1453cfbc3cc0fdf5a.jpg";
-
-      const style = document.createElement("style");
-      style.textContent = `
-        #templateWebring {
-          width: 300px;
-          height: 164px;
-          margin: 40px auto;
-          background-image: url('https://webring.koinuko.pink/img/bg.png');
-          background-size: cover;
-          font-family: Verdana;
-          color: #452134;
-          text-align: center;
-          border: 2px solid #DD28A7;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-        }
-
-        #webringdesc {
-          font-size: 14px;
-          font-weight: bold;
-          color: #BF3C8E;
-          line-height: 1.4;
-        }
-
-        #webringiconbox {
-          display: none;
-        }
-      `;
-      document.head.appendChild(style);
-
-      const container = document.createElement("div");
-      container.id = "templateWebring";
-      container.innerHTML = `
-        <div id='webringdesc'>
-          <p>${quoteSelfWebring}</p>
-        </div>
-      `;
-      document.body.appendChild(container);  // Appending the Webring at the end of the body
-    </script>
-  </body>
-</html>
+              if (password === correctPassword) {
+                document.getElementById("passwordForm").style.display = "none";
+                document.getElementById("filesSection").style.display = "block";
+              } else {
+                alert("Wrong password! Please try again.");
+              }
+            }
+          </script>
