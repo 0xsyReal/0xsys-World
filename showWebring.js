@@ -1,4 +1,4 @@
-// Tüm görsellerin listesi
+// List of all webring images
 const webringImages = [
   "https://i.hizliresim.com/czozt3i.gif",
   "https://i.hizliresim.com/aefuz92.png",
@@ -21,22 +21,22 @@ const webringImages = [
   "https://i.hizliresim.com/6rvk3cp.jpg"
 ];
 
-// Önceki gösterilen görselin index'ini sessionStorage'dan al
+// Retrieve the index of the previously displayed image from sessionStorage
 let lastIndex = parseInt(sessionStorage.getItem("lastWebringImageIndex")) || -1;
 let newIndex;
 
-// Aynı resmin tekrar çıkmaması için döngü
+// Ensure the same image is not shown consecutively
 do {
   newIndex = Math.floor(Math.random() * webringImages.length);
 } while (newIndex === lastIndex && webringImages.length > 1);
 
-// Yeni seçilen index'i kaydet
+// Save the newly selected index
 sessionStorage.setItem("lastWebringImageIndex", newIndex);
 
-// Seçilen görsel
+// Selected image URL
 const imgurlSelfWebring = webringImages[newIndex];
 
-// HTML öğesini oluştur ve ekle
+// Create and append the HTML element
 const templateWebring = document.createElement("div");
 templateWebring.innerHTML = `
 <style>

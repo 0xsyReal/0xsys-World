@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>0xsy's world</title>
-  <link href="css/page.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="icon" href="img/cuty.gif" type="image/gif">
+  <link href="css/page.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="icon" href="img/cuty.gif" type="image/gif" />
   <style>
     button {
       background-color: #FFB6C1;
@@ -28,13 +28,14 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    /* Container styling for the Webring widget */
     #templateWebring {
       width: 300px;
       height: 164px;
       margin: 40px auto;
       background-image: url('https://webring.koinuko.pink/img/bg.png');
       background-size: cover;
-      font-family: Verdana;
+      font-family: Verdana, sans-serif;
       color: #452134;
       text-align: center;
       border: 2px solid #DD28A7;
@@ -45,6 +46,7 @@
       padding: 10px;
     }
 
+    /* Description text style inside the Webring widget */
     #webringdesc {
       font-size: 14px;
       font-weight: bold;
@@ -52,6 +54,7 @@
       line-height: 1.4;
     }
 
+    /* Icon container hidden by default */
     #webringiconbox {
       display: none;
     }
@@ -59,211 +62,160 @@
 </head>
 <body>
   <audio id="bgMusic" loop>
-    <source src="bg.mp3" type="audio/mp3">
+    <source src="bg.mp3" type="audio/mp3" />
     Your browser does not support this sound.
   </audio>
 
   <div class="layout">
     <div class="grid-container">
-      <!-- status -->
+      <!-- User status box -->
       <div class="item5" style="width:225px; height:115px; overflow-y:auto;">
-        <img src="img/pfp.jpg" style="width:100px; float:left; padding:3px;">
+        <img src="img/pfp.jpg" alt="Profile Picture" style="width:100px; float:left; padding:3px;" />
         <div id="statuscafe">
           <div id="statuscafe-username">0xsy</div>
           <div id="statuscafe-content">uwu :3</div>
         </div>
       </div>
        
-      <!-- header -->
+      <!-- Header banner -->
       <div class="item1" style="height:115px; background-image:url('/img/banner2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;">
-        <div style="color:rgba(255, 255, 255, 0); user-select: none;">im doing janky shit again please forgive me. okaaaaaaaaayyyy :/</div>
+        <div style="color:rgba(255, 255, 255, 0); user-select: none;">
+          im doing janky shit again please forgive me. okaaaaaaaaayyyy :/
+        </div>
       </div>
 
-      <!-- sidebar -->
+      <!-- Sidebar navigation -->
       <div class="item3" style="width:100px">
-        <img src="img/graphics/rainicorn.png" width="90px">
-        <hr>
-        <b>navigation</b><br>
-        ♡ <a href="https://discord.com/users/803634256517005334" target="_blank">discord</a><br>
-        ♡ <a href="https://youtube.com/@0xsyreal" target="_blank">youtube</a><br>
-        ♡ <a href="https://steamcommunity.com/id/0xsy" target="_blank">steam</a><br>
-        ♡ <a href="https://roblox.com/users/5519159495/profile" target="_blank">roblox</a><br>
-        ♡ <a href="https://namemc.com/profile/0xsy" target="_blank">namemc</a>
-        <hr>
+        <img src="img/graphics/rainicorn.png" alt="Rainicorn" width="90px" />
+        <hr />
+        <b>navigation</b><br />
+        ♡ <a href="https://discord.com/users/803634256517005334" target="_blank" rel="noopener noreferrer">discord</a><br />
+        ♡ <a href="https://youtube.com/@0xsyreal" target="_blank" rel="noopener noreferrer">youtube</a><br />
+        ♡ <a href="https://steamcommunity.com/id/0xsy" target="_blank" rel="noopener noreferrer">steam</a><br />
+        ♡ <a href="https://roblox.com/users/5519159495/profile" target="_blank" rel="noopener noreferrer">roblox</a><br />
+        ♡ <a href="https://namemc.com/profile/0xsy" target="_blank" rel="noopener noreferrer">namemc</a>
+        <hr />
       </div>
 
-      <!-- main -->
+      <!-- Main content -->
       <div class="item2">
         <div align="center">
-          <img src="img/graphics/catbnuy.gif">
-          <img src="img/graphics/letters.gif">
-          <img src="img/graphics/catbnuy.gif">
-          <br>
+          <img src="img/graphics/catbnuy.gif" alt="Cat Animation" />
+          <img src="img/graphics/letters.gif" alt="Letters Animation" />
+          <img src="img/graphics/catbnuy.gif" alt="Cat Animation" />
+          <br />
           <div class="header">Welcome!~ ♪(´▽｀)</div>
         </div>
-        <hr>
-        <a href="https://toyhou.se/Robodoggiez">
-          <img src="https://i.pinimg.com/736x/56/1d/a4/561da4256042db44ddf671fe5f757f3e.jpg" style="float:left; width:120px">
+        <hr />
+        <a href="https://toyhou.se/Robodoggiez" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.pinimg.com/736x/56/1d/a4/561da4256042db44ddf671fe5f757f3e.jpg" alt="Robodoggiez" style="float:left; width:120px" />
         </a>
-        <p>hi, im 0xsy. i use he/him pronouns. i like cute stuff, coding, playing video games and sometimes drawing.</p>
-        <hr>
+        <p>Hi, I'm 0xsy. I use he/him pronouns. I enjoy cute stuff, coding, playing video games, and sometimes drawing.</p>
+        <hr />
 
         <div style="text-align:center; margin-top:20px;">
           <button onclick="playMusic()">♡ Start the Music! ♡</button>
         </div>
 
-        <hr>
-        <marquee direction="right">
-          <img src="img/graphics/buttons/ttr.png">
-          <img src="img/graphics/buttons/weezerfan.gif">
-          <img src="img/graphics/buttons/animaljam.png">
-          <img src="img/graphics/buttons/antihentai.gif">
-          <img src="img/graphics/buttons/besteyes.gif">
-          <img src="img/graphics/buttons/button269.gif">
-          <img src="img/graphics/buttons/code-editor.png">
-          <img src="img/graphics/buttons/tto.png">
-          <img src="img/graphics/buttons/funny.gif">
-          <img src="img/graphics/buttons/furby%20button.png">
-          <img src="img/graphics/buttons/graphicdesign.gif">
-          <img src="img/graphics/buttons/kyaah.gif">
-          <img src="img/graphics/buttons/melody.gif">
-          <img src="img/graphics/buttons/miku.gif">
-          <img src="img/graphics/buttons/miku2.gif">
-          <img src="img/graphics/buttons/NYA!.gif">
-          <img src="img/graphics/buttons/paws.png">
-          <img src="img/graphics/buttons/puyo.png">
-          <img src="img/graphics/buttons/Censor_NYRc.gif" width="88px" height="31px">
-          <img src="img/graphics/buttons/toonbook%20button.png">
-          <img src="img/graphics/buttons/valentines_button.gif">
+        <hr />
+        <marquee direction="right" aria-label="Scrolling buttons">
+          <!-- Various buttons for fun and aesthetics -->
+          <img src="img/graphics/buttons/ttr.png" alt="TTR Button" />
+          <img src="img/graphics/buttons/weezerfan.gif" alt="Weezer Fan" />
+          <img src="img/graphics/buttons/animaljam.png" alt="Animal Jam" />
+          <img src="img/graphics/buttons/antihentai.gif" alt="Anti-Hentai" />
+          <img src="img/graphics/buttons/besteyes.gif" alt="Best Eyes" />
+          <img src="img/graphics/buttons/button269.gif" alt="Button 269" />
+          <img src="img/graphics/buttons/code-editor.png" alt="Code Editor" />
+          <img src="img/graphics/buttons/tto.png" alt="TTO Button" />
+          <img src="img/graphics/buttons/funny.gif" alt="Funny Button" />
+          <img src="img/graphics/buttons/furby%20button.png" alt="Furby Button" />
+          <img src="img/graphics/buttons/graphicdesign.gif" alt="Graphic Design" />
+          <img src="img/graphics/buttons/kyaah.gif" alt="Kyaah" />
+          <img src="img/graphics/buttons/melody.gif" alt="Melody" />
+          <img src="img/graphics/buttons/miku.gif" alt="Miku" />
+          <img src="img/graphics/buttons/miku2.gif" alt="Miku 2" />
+          <img src="img/graphics/buttons/NYA!.gif" alt="Nya!" />
+          <img src="img/graphics/buttons/paws.png" alt="Paws" />
+          <img src="img/graphics/buttons/puyo.png" alt="Puyo" />
+          <img src="img/graphics/buttons/Censor_NYRc.gif" width="88" height="31" alt="Censor" />
+          <img src="img/graphics/buttons/toonbook%20button.png" alt="Toonbook" />
+          <img src="img/graphics/buttons/valentines_button.gif" alt="Valentines" />
         </marquee>
-        <hr>
+        <hr />
 
         <!-- WEBRINGS -->
         <table width="100%">
           <tr>
             <td width="190px">
               <div style="width: 156px; margin:auto;">
-                <img src="https://i.pinimg.com/736x/de/d1/bb/ded1bb4e86a503a4d4aa4900a1158dcb.jpg" style="width:156px; height:156px;">
+                <img src="https://i.pinimg.com/736x/de/d1/bb/ded1bb4e86a503a4d4aa4900a1158dcb.jpg" alt="Webring Example" style="width:156px; height:156px;" />
               </div>
             </td>
             <td>
               <!--START OF SELF INSERT WEBRING-->
               <div id="selfinsertwebring">
-                <script src="showWebring.js"></script>
+                <script>
+                  // List of all webring images
+                  const webringImages = [
+                    "https://i.hizliresim.com/czozt3i.gif",
+                    "https://i.hizliresim.com/aefuz92.png",
+                    "https://i.hizliresim.com/76irlcf.jpg",
+                    "https://i.hizliresim.com/8x1dwer.gif",
+                    "https://i.hizliresim.com/q3xr94q.jpg",
+                    "https://i.hizliresim.com/s14oj76.jpg",
+                    "https://i.hizliresim.com/7ow5vfh.gif",
+                    "https://i.hizliresim.com/1n9y4cq.jpg",
+                    "https://i.hizliresim.com/k7ktxkb.png",
+                    "https://i.hizliresim.com/qqg858v.jpg",
+                    "https://i.hizliresim.com/loaubpb.jpg",
+                    "https://i.hizliresim.com/700jg0c.jpg",
+                    "https://i.hizliresim.com/1zpz5zg.jpg",
+                    "https://i.hizliresim.com/rd0jlh4.jpg",
+                    "https://i.hizliresim.com/hirmbtj.jpg",
+                    "https://i.hizliresim.com/4yfidk7.jpg",
+                    "https://i.hizliresim.com/jkxlrdh.gif",
+                    "https://i.hizliresim.com/kt7f43o.gif",
+                    "https://i.hizliresim.com/b1nmgu3.jpg",
+                    "https://i.hizliresim.com/vlmqhz9.gif",
+                    "https://i.hizliresim.com/g11klzo.png",
+                    "https://i.hizliresim.com/8ndsnj0.jpg",
+                    "https://i.hizliresim.com/kq7k1b3.gif",
+                    "https://i.hizliresim.com/xtpggxq.gif",
+                    "https://i.hizliresim.com/9hpoaf7.gif",
+                    "https://i.hizliresim.com/3p8h2wl.gif",
+                    "https://i.hizliresim.com/wiozssr.png",
+                    "https://i.hizliresim.com/5jyswqo.jpg",
+                    "https://i.hizliresim.com/2mcpbzt.gif",
+                    "https://i.hizliresim.com/f20xw7k.gif"
+                  ];
+
+                  // Pick a random image to display
+                  const randomIndex = Math.floor(Math.random() * webringImages.length);
+                  const randomImage = webringImages[randomIndex];
+
+                  // Insert image into the div
+                  document.getElementById("selfinsertwebring").innerHTML = `<img src="${randomImage}" alt="Random Webring Image" width="100%" />`;
+                </script>
               </div>
               <!--END OF SELF INSERT WEBRING-->
             </td>
           </tr>
         </table>
-        <hr>
-        <marquee>
-          <img src="img/graphics/blinkies/buds.gif">
-          <img src="img/graphics/blinkies/bunny.gif">
-          <img src="img/graphics/blinkies/candy.gif">
-          <img src="img/graphics/blinkies/cat.gif">
-          <img src="img/graphics/blinkies/catsmeow.gif">
-          <img src="img/graphics/blinkies/computer.gif">
-          <img src="img/graphics/blinkies/dreamy.gif">
-          <img src="img/graphics/blinkies/drop.gif">
-          <img src="img/graphics/blinkies/fluttershy.gif">
-          <img src="img/graphics/blinkies/goodnight.gif">
-          <img src="img/graphics/blinkies/hewwo.gif">
-          <img src="img/graphics/blinkies/home.gif">
-          <img src="img/graphics/blinkies/iheartsanrio.gif">
-          <img src="img/graphics/blinkies/jammies.gif">
-          <img src="img/graphics/blinkies/jerma.gif">
-          <img src="img/graphics/blinkies/kawaii.gif">
-          <img src="img/graphics/blinkies/kitten.gif">
-          <img src="img/graphics/blinkies/kitties.gif">
-          <img src="img/graphics/blinkies/love.gif">
-          <img src="img/graphics/blinkies/maid.gif">
-          <img src="img/graphics/blinkies/mcdonalds.gif">
-          <img src="img/graphics/blinkies/meow.gif">
-          <img src="img/graphics/blinkies/nyancat.gif" width="150px" height="20px">
-          <img src="img/graphics/blinkies/pink.gif">
-          <img src="img/graphics/blinkies/sparkle.gif">
-          <img src="img/graphics/blinkies/teddy.gif">
-          <img src="img/graphics/blinkies/twinkle.gif">
-          <img src="img/graphics/blinkies/valentine.gif">
-          <img src="img/graphics/blinkies/webkinz.gif">
-        </marquee>
-        <hr>
-
-        <div class="header">Update log! ♡</div>
-        <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
-          <b>05/10/25</b> - Hewwo! its my update log message! :3
-        </div>
-        <hr>
-
-        <!-- RANDOM IMAGE -->
-        <div style="float:left; margin-right:10px;">
-          <div class="header" style="font-size:15px; margin:5px;">random image</div>
-          <img id="randomImage" src="" style="width:200px; height:200px;">
-        </div>
-
-        <div style="float:left;">
-          <div class="header" style="font-size:15px; margin:5px;">random video</div>
-          <iframe id="randomVideo" style="padding:5px;" width="310px" height="200px" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
       </div>
     </div>
   </div>
 
   <script>
+    // Function to play background music when button clicked
     function playMusic() {
-      var music = document.getElementById('bgMusic');
+      const music = document.getElementById('bgMusic');
       if (music.paused) {
         music.play();
+      } else {
+        music.pause();
       }
     }
-
-    window.onload = function () {
-      const randomImages = [
-
-      ];
-
-      const randomVideos = [
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/"
-      ];
-
-      const lastRandomImageIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
-      let newImageIndex;
-      do {
-        newImageIndex = Math.floor(Math.random() * randomImages.length);
-      } while (newImageIndex === lastRandomImageIndex && randomImages.length > 1);
-      sessionStorage.setItem("lastRandomImageIndex", newImageIndex);
-
-      const img = document.getElementById("randomImage");
-      if (img) {
-        img.src = randomImages[newImageIndex];
-      }
-
-      const lastRandomVideoIndex = parseInt(sessionStorage.getItem("lastRandomVideoIndex")) || -1;
-      let newVideoIndex;
-      let videoCount = 0;
-
-      do {
-        newVideoIndex = Math.floor(Math.random() * randomVideos.length);
-        videoCount++;
-      } while (newVideoIndex === lastRandomVideoIndex && videoCount < 4);
-      
-      sessionStorage.setItem("lastRandomVideoIndex", newVideoIndex);
-
-      const iframe = document.getElementById("randomVideo");
-      if (iframe) {
-        iframe.src = randomVideos[newVideoIndex];
-      }
-    };
   </script>
 </body>
 </html>
