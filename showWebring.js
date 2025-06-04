@@ -1,4 +1,4 @@
-// List of all webring images
+
 const webringImages = [
   "https://i.hizliresim.com/czozt3i.gif",
   "https://i.hizliresim.com/aefuz92.png",
@@ -21,24 +21,24 @@ const webringImages = [
   "https://i.hizliresim.com/6rvk3cp.jpg"
 ];
 
-// Retrieve the index of the previously displayed image from sessionStorage
+
 let lastIndex = parseInt(sessionStorage.getItem("lastWebringImageIndex")) || -1;
 let newIndex;
 
-// Ensure the same image is not shown consecutively
+
 do {
   newIndex = Math.floor(Math.random() * webringImages.length);
 } while (newIndex === lastIndex && webringImages.length > 1);
 
-// Save the newly selected index
+
 sessionStorage.setItem("lastWebringImageIndex", newIndex);
 
-// Selected image URL
+
 const imgurlSelfWebring = webringImages[newIndex];
 
-// Create and append the HTML element
+
 const templateWebring = document.createElement("div");
-templateWebring.innerHTML = `
+templateWebring.innerHTML = 
 <style>
   #templateWebring {
     width: 300px !important;
@@ -83,6 +83,6 @@ templateWebring.innerHTML = `
   </div>
   <p id="webringdesc">🎀 Cuteness is a defense mechanism. Please do not engage.</p>
 </div>
-`;
+;
 
 document.getElementById("selfinsertwebring").appendChild(templateWebring);
