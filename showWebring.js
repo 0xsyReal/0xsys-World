@@ -38,7 +38,7 @@ const imgurlSelfWebring = webringImages[newIndex];
 
 
 const templateWebring = document.createElement("div");
-templateWebring.innerHTML = 
+templateWebring.innerHTML = `
 <style>
   #templateWebring {
     width: 300px !important;
@@ -83,6 +83,6 @@ templateWebring.innerHTML =
   </div>
   <p id="webringdesc">🎀 Cuteness is a defense mechanism. Please do not engage.</p>
 </div>
-;
+`;
 
 document.getElementById("selfinsertwebring").appendChild(templateWebring);
