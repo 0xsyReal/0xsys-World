@@ -55,6 +55,12 @@
     #webringiconbox {
       display: none;
     }
+
+    /* Responsive visitor counter */
+    #visitorCounter {
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
@@ -189,9 +195,15 @@
         </marquee>
         <hr>
 
+        <!-- Visitor Counter -->
+        <div style="text-align:center; margin-bottom:10px;">
+          <img id="visitorCounter" src="https://count.getloli.com/get/@0xsy" alt="Visitor Counter">
+        </div>
+
         <div class="header">Update log! ♡</div>
         <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
           <b>05/10/25</b> - Hewwo! its my update log message! :3
+          <b>06/04/25</b> - visitor counter added
         </div>
         <hr>
 
@@ -201,70 +213,4 @@
           <img id="randomImage" src="" style="width:200px; height:200px;">
         </div>
 
-        <div style="float:left;">
-          <div class="header" style="font-size:15px; margin:5px;">random video</div>
-          <iframe id="randomVideo" style="padding:5px;" width="310px" height="200px" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function playMusic() {
-      var music = document.getElementById('bgMusic');
-      if (music.paused) {
-        music.play();
-      }
-    }
-
-    window.onload = function () {
-      const randomImages = [
-
-      ];
-
-      const randomVideos = [
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/",
-        "https://www.youtube.com/"
-      ];
-
-      const lastRandomImageIndex = parseInt(sessionStorage.getItem("lastRandomImageIndex")) || -1;
-      let newImageIndex;
-      do {
-        newImageIndex = Math.floor(Math.random() * randomImages.length);
-      } while (newImageIndex === lastRandomImageIndex && randomImages.length > 1);
-      sessionStorage.setItem("lastRandomImageIndex", newImageIndex);
-
-      const img = document.getElementById("randomImage");
-      if (img) {
-        img.src = randomImages[newImageIndex];
-      }
-
-      const lastRandomVideoIndex = parseInt(sessionStorage.getItem("lastRandomVideoIndex")) || -1;
-      let newVideoIndex;
-      let videoCount = 0;
-
-      do {
-        newVideoIndex = Math.floor(Math.random() * randomVideos.length);
-        videoCount++;
-      } while (newVideoIndex === lastRandomVideoIndex && videoCount < 4);
-      
-      sessionStorage.setItem("lastRandomVideoIndex", newVideoIndex);
-
-      const iframe = document.getElementById("randomVideo");
-      if (iframe) {
-        iframe.src = randomVideos[newVideoIndex];
-      }
-    };
-  </script>
-</body>
-</html>
-
+        <div style
