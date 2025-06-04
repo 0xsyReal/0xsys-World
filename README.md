@@ -1,5 +1,5 @@
 <div align="center">
-<h1> 🌸 Kawaii Personal Site 🎀</h1>
+<h1> 🌸 0xsy's World 🎀</h1>
 
 ## ˚₊· ͟͟͞͞➳❥ Welcome to my adorable corner of the web! ⋆｡°✩
 
@@ -9,7 +9,7 @@
 
 ## ⋆˚₊⊹⋆ About This Project ⋆˚₊⊹⋆
 
-This is my super kawaii personal website where I share my interests and creative works! Built with lots of love and pastel colors 💖
+This is my kawaii personal website
 
 ## ✧･ﾟ Features ･ﾟ✧
 * 🎀 Cute and pink aesthetic design
