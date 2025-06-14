@@ -56,6 +56,7 @@
       display: none;
     }
 
+    /* Responsive visitor counter */
     #visitorCounter {
       max-width: 100%;
       height: auto;
@@ -64,12 +65,13 @@
 </head>
 <body>
   <audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mp3">
+    <source src="bg.mp3" type="audio/mp3">
+    Your browser does not support this sound.
   </audio>
 
   <div class="layout">
     <div class="grid-container">
-      <!-- Status -->
+      <!-- status -->
       <div class="item5" style="width:225px; height:115px; overflow-y:auto;">
         <img src="img/pfp.jpg" style="width:100px; float:left; padding:3px;">
         <div id="statuscafe">
@@ -77,13 +79,13 @@
           <div id="statuscafe-content">uwu :3</div>
         </div>
       </div>
-
-      <!-- Header -->
+       
+      <!-- header -->
       <div class="item1" style="height:115px; background-image:url('/img/banner2.png'); background-size: contain; background-repeat: no-repeat; background-position: center; overflow: hidden;">
         <div style="color:rgba(255, 255, 255, 0); user-select: none;"> </div>
       </div>
 
-      <!-- Sidebar -->
+      <!-- sidebar -->
       <div class="item3" style="width:100px">
         <img src="img/graphics/rainicorn.png" width="90px">
         <hr>
@@ -96,7 +98,7 @@
         <hr>
       </div>
 
-      <!-- Main -->
+      <!-- main -->
       <div class="item2">
         <div align="center">
           <img src="img/graphics/catbnuy.gif">
@@ -115,11 +117,30 @@
         <div style="text-align:center; margin-top:20px;">
           <button onclick="playMusic()">♡ Start the Music! ♡</button>
         </div>
-        <hr>
 
-        <!-- Button Bar -->
+        <hr>
         <marquee direction="right">
-          <!-- ... button GIFs ... -->
+          <img src="img/graphics/buttons/ttr.png">
+          <img src="img/graphics/buttons/weezerfan.gif">
+          <img src="img/graphics/buttons/animaljam.png">
+          <img src="img/graphics/buttons/antihentai.gif">
+          <img src="img/graphics/buttons/besteyes.gif">
+          <img src="img/graphics/buttons/button269.gif">
+          <img src="img/graphics/buttons/code-editor.png">
+          <img src="img/graphics/buttons/tto.png">
+          <img src="img/graphics/buttons/funny.gif">
+          <img src="img/graphics/buttons/furby%20button.png">
+          <img src="img/graphics/buttons/graphicdesign.gif">
+          <img src="img/graphics/buttons/kyaah.gif">
+          <img src="img/graphics/buttons/melody.gif">
+          <img src="img/graphics/buttons/miku.gif">
+          <img src="img/graphics/buttons/miku2.gif">
+          <img src="img/graphics/buttons/NYA!.gif">
+          <img src="img/graphics/buttons/paws.png">
+          <img src="img/graphics/buttons/puyo.png">
+          <img src="img/graphics/buttons/Censor_NYRc.gif" width="88px" height="31px">
+          <img src="img/graphics/buttons/toonbook%20button.png">
+          <img src="img/graphics/buttons/valentines_button.gif">
         </marquee>
         <hr>
 
@@ -132,17 +153,45 @@
               </div>
             </td>
             <td>
+              <!--START OF SELF INSERT WEBRING-->
               <div id="selfinsertwebring">
                 <script src="showWebring.js"></script>
               </div>
+              <!--END OF SELF INSERT WEBRING-->
             </td>
           </tr>
         </table>
         <hr>
-
-        <!-- Blinkies -->
         <marquee>
-          <!-- ... blinkie GIFs ... -->
+          <img src="img/graphics/blinkies/buds.gif">
+          <img src="img/graphics/blinkies/bunny.gif">
+          <img src="img/graphics/blinkies/candy.gif">
+          <img src="img/graphics/blinkies/cat.gif">
+          <img src="img/graphics/blinkies/catsmeow.gif">
+          <img src="img/graphics/blinkies/computer.gif">
+          <img src="img/graphics/blinkies/dreamy.gif">
+          <img src="img/graphics/blinkies/drop.gif">
+          <img src="img/graphics/blinkies/fluttershy.gif">
+          <img src="img/graphics/blinkies/goodnight.gif">
+          <img src="img/graphics/blinkies/hewwo.gif">
+          <img src="img/graphics/blinkies/home.gif">
+          <img src="img/graphics/blinkies/iheartsanrio.gif">
+          <img src="img/graphics/blinkies/jammies.gif">
+          <img src="img/graphics/blinkies/jerma.gif">
+          <img src="img/graphics/blinkies/kawaii.gif">
+          <img src="img/graphics/blinkies/kitten.gif">
+          <img src="img/graphics/blinkies/kitties.gif">
+          <img src="img/graphics/blinkies/love.gif">
+          <img src="img/graphics/blinkies/maid.gif">
+          <img src="img/graphics/blinkies/mcdonalds.gif">
+          <img src="img/graphics/blinkies/meow.gif">
+          <img src="img/graphics/blinkies/nyancat.gif" width="150px" height="20px">
+          <img src="img/graphics/blinkies/pink.gif">
+          <img src="img/graphics/blinkies/sparkle.gif">
+          <img src="img/graphics/blinkies/teddy.gif">
+          <img src="img/graphics/blinkies/twinkle.gif">
+          <img src="img/graphics/blinkies/valentine.gif">
+          <img src="img/graphics/blinkies/webkinz.gif">
         </marquee>
         <hr>
 
@@ -151,39 +200,17 @@
           <img id="visitorCounter" src="https://count.getloli.com/get/@0xsy?theme=gelbooru" alt="Visitor Counter">
         </div>
 
-        <!-- Update Log -->
         <div class="header">Update log! ♡</div>
         <div style="height:150px; overflow: auto; border: 2px solid #FEDAE6; border-radius:5px; background-color:white; padding:5px;">
-          <b>05/10/25</b> - Hewwo! its my update log message! :3  
+
+        <b>05/10/25</b> - Hewwo! its my update log message! :3  
         </div>
         <hr>
 
-        <!-- Random Image -->
+        <!-- RANDOM IMAGE -->
         <div style="float:left; margin-right:10px;">
           <div class="header" style="font-size:15px; margin:5px;">Random image</div>
           <img id="randomImage" src="" style="width:200px; height:200px;">
         </div>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    function playMusic() {
-      const music = document.getElementById("bgMusic");
-      music.play();
-    }
-
-    // Rastgele görsel gösterme
-    const images = [
-      "img/random/random1.jpg",
-      "img/random/random2.jpg",
-      "img/random/random3.jpg",
-      "img/random/random4.png",
-      "img/random/random5.png"
-    ];
-    const randomImg = document.getElementById("randomImage");
-    const randomIndex = Math.floor(Math.random() * images.length);
-    randomImg.src = images[randomIndex];
-  </script>
-</body>
-</html>
+        <div style
