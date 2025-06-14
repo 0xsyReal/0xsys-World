@@ -81,7 +81,7 @@ templateWebring.innerHTML = `
   <div id="webringiconbox">
     <img id="iconWebring" src="${imgurlSelfWebring}" alt="Webring Icon">
   </div>
-  <p id="webringdesc">🎀 Cuteness is a defense mechanism. Please do not engage.</p>
+  <p id="webringdesc">🎀 Cuteness is a camouflage. Don’t ruin the illusion.</p>
 </div>
 `;
 
